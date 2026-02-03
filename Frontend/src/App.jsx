@@ -3,50 +3,69 @@ import { ConfigSidebar } from "./components/ConfigSidebar";
 import { JDInput } from "./components/JDInput"
 import { OutputDisplay } from "./components/OutputDisplay"
 import { Header } from "./components/Header"
-export const App = () => {
+// 1. Gemini SDK import karein
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
+export const App = () => {
   const [userProfile, setUserProfile] = useState({ bio: "", template: "" });
   const [jd, setJd] = useState("");
-  const [finalRsult, setFinalResult] = useState("")
+  const [finalRsult, setFinalResult] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const updateProfile = (newData) => {
     setUserProfile(newData)
   }
 
-  const generateLogic = () => {
+  const generateLogic = async () => {
     if (!userProfile.bio.trim() || !userProfile.template.trim() || !jd.trim()) {
       alert("Please fill all fields: Bio, Template, and Job Description");
       return;
     }
 
-    const finalData = `Bio: ${userProfile.bio}\n\nTemplate: ${userProfile.template}\n\nJob Description: ${jd}`;
-    setFinalResult(finalData);
+    const FinalData = `User Bio: ${userProfile.bio} \nUser Template ${userProfile.template} \nJob Description: ${jd}`
+
+    try {
+      setFinalResult(FinalData)
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+
+
   }
 
   return (
-
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
       <Header />
-      <div className="flex">
-        <ConfigSidebar onSave={updateProfile} />
 
-        <main className="flex-1 flex flex-col">
+      <div className="max-w-6xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-          <div className="flex-1 p-8 overflow-auto">
+        {/* Sidebar - Configuration */}
+        <div className="space-y-6">
+          <ConfigSidebar onSave={updateProfile} />
+        </div>
+
+        {/* Main Input & Output */}
+        <div className="lg:col-span-2 space-y-6">
+          {/* Input Box */}
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
             <JDInput jd={jd} setJd={setJd} />
 
-            <div className="max-w-4xl mx-auto mt-6">
-              <button
-                className="w-full py-4 px-8 bg-linear-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-[1.02] transition-all duration-200 shadow-lg"
-                onClick={generateLogic}
-              >
-                Generate Cold Email
-              </button>
-            </div>
-
-            <OutputDisplay result={finalRsult} />
+            <button
+              disabled={loading}
+              className={`w-full mt-4 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${loading ? 'bg-slate-200 text-slate-500' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg hover:shadow-indigo-200'
+                }`}
+              onClick={generateLogic}
+            >
+              {loading ? "AI is Crafting..." : <>✨ Generate Personalized Message</>}
+            </button>
           </div>
-        </main>
+
+          {/* Result Box */}
+          <OutputDisplay result={finalRsult} />
+        </div>
+
       </div>
     </div>
   )

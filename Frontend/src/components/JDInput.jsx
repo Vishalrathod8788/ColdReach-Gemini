@@ -1,18 +1,25 @@
 export const JDInput = ({ jd, setJd }) => {
     return (
-        <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-2">Job Description</h2>
-                <p className="text-gray-600 mb-6">Paste the job description you want to apply for</p>
+        <div className="">
 
-                <textarea
-                    className="w-full h-80 p-6 border-2 border-gray-200 rounded-xl resize-none focus:border-blue-500 focus:outline-none transition-colors text-sm leading-relaxed"
-                    value={jd}
-                    required
-                    placeholder="Paste the job description here... Include job title, company, required skills, and responsibilities"
-                    onChange={(e) => setJd(e.target.value)}
-                ></textarea>
+            {/* Header */}
+            <div className="flex justify-between items-center mb-4">
+                <h3 className="font-semibold text-slate-800">
+                    Paste Job Description
+                </h3>
             </div>
+
+            {/* Textarea */}
+            <textarea
+                className="w-full h-64 p-4 border rounded-xl resize-none
+                   focus:ring-2 focus:ring-indigo-500 focus:outline-none
+                   text-sm leading-relaxed bg-white"
+                value={jd}
+                required
+                placeholder="Drop the LinkedIn / Indeed job description here..."
+                onChange={(e) => setJd(e.target.value)}
+            />
+
         </div>
     )
 }

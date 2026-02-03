@@ -1,29 +1,46 @@
 export const OutputDisplay = ({ result }) => {
     return (
-        <div className="max-w-4xl mx-auto mt-8">
+        <>
             {result && (
-                <div className="bg-white rounded-2xl shadow-lg p-8">
-                    <div className="flex items-center mb-6">
-                        <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                        <h2 className="text-2xl font-semibold text-gray-800">Generated Cold Email</h2>
+                <div className="bg-white p-6 rounded-2xl shadow-sm border-2 border-indigo-100 animate-in fade-in slide-in-from-bottom-4 duration-500">
+
+                    {/* Header */}
+                    <div className="flex justify-between items-center mb-4">
+                        <h3 className="font-semibold text-indigo-900">
+                            Personalized Outreach
+                        </h3>
+
+                        <span className="text-xs font-medium px-3 py-1 rounded-full bg-indigo-50 text-indigo-700">
+                            AI Generated
+                        </span>
                     </div>
-                    
-                    <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-blue-500">
-                        <pre className="whitespace-pre-wrap text-gray-700 leading-relaxed font-sans">
-                            {result}
-                        </pre>
+
+                    {/* Content */}
+                    <div className="p-4 bg-slate-50 rounded-xl text-slate-700 leading-relaxed whitespace-pre-wrap text-sm">
+                        {result}
                     </div>
-                    
-                    <div className="flex gap-3 mt-6">
-                        <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                            Copy Email
+
+                    {/* Actions */}
+                    <div className="flex gap-3 mt-4">
+                        <button
+                            className="px-5 py-2 text-sm font-medium rounded-lg
+                         bg-indigo-600 text-white hover:bg-indigo-700
+                         transition shadow hover:shadow-indigo-200"
+                        >
+                            Copy Message
                         </button>
-                        <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+
+                        <button
+                            className="px-5 py-2 text-sm font-medium rounded-lg
+                         bg-white border border-slate-300 text-slate-700
+                         hover:bg-slate-50 transition"
+                        >
                             Regenerate
                         </button>
                     </div>
+
                 </div>
             )}
-        </div>
+        </>
     )
-}   
+}
