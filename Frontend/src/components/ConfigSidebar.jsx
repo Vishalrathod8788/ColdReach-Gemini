@@ -11,7 +11,6 @@ export const ConfigSidebar = ({ onSave }) => {
     return (
         <div className="space-y-6">
 
-            {/* Profile Card */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
                 <h3 className="font-semibold mb-4 flex items-center gap-2">
                     👤 Your Profile
@@ -28,7 +27,6 @@ export const ConfigSidebar = ({ onSave }) => {
                 />
             </div>
 
-            {/* Template Card */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
                 <h3 className="font-semibold mb-4">
                     📝 Base Template
