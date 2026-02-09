@@ -19,69 +19,100 @@ export const HowItWorksModal = ({ isOpen, onClose }) => {
     message: [
       {
         name: "Professional & Direct",
-        template: `Hi [Name],
+        template: `Hi [Recruiter Name],
 
-I came across the [Position] opening at [Company] and was immediately drawn to [specific aspect].
+I’m Vishal Rathod, a full stack developer proficient in the MERN stack (React, Node, Express, MongoDB). I was excited to find your job posting as it aligns perfectly with my skills and aspirations to work on impactful projects.
 
-With my background in [Your Skills], I believe I could contribute to [specific goal]. At [Previous Company], I [achievement].
+You can view my portfolio at https://vishal88.com/ and my resume here: https://drive.google.com/file/d/1vrdazR4u6ffQhxmlUFX9NNQLkXADcWkX/view
 
-Would you be open to a brief conversation?
+I look forward to discussing how I can contribute to [Company Name]’s success.
 
-Best regards,
-[Your Name]`
+Best,
+Vishal Rathod`
       },
-      {
-        name: "Value-First",
-        template: `Hi [Name],
+      //       {
+      //         name: "Value-First",
+      //         template: `Hi [Name],
 
-I noticed [Company] is hiring for [Position]. I specialize in [Your Core Skill] and have helped achieve [specific result].
+      // I noticed [Company] is hiring for [Position]. I specialize in [Your Core Skill] and have helped achieve [specific result].
 
-Here's what I bring:
-• [Skill 1] - [Achievement]
-• [Skill 2] - [Achievement]
+      // Here's what I bring:
+      // • [Skill 1] - [Achievement]
+      // • [Skill 2] - [Achievement]
 
-I'd love to discuss how I can contribute. Are you available for a quick call?
+      // I'd love to discuss how I can contribute. Are you available for a quick call?
 
-[Your Name]`
-      }
+      // [Your Name]`
+      //       }
     ],
     email: [
       {
-        name: "Professional Email",
-        template: `Subject: [Position] Role at [Company] - Quick Question
+        name: "React.js Focused",
+        template: `Subject: Application for Frontend Developer | MERN Stack | Vishal Rathod
+Hi [Recruiter Name],
 
-Dear [Hiring Manager Name],
+I’m Vishal Rathod, a Full Stack Developer specializing in the MERN stack. I was excited to reach out because your job posting for the Frontend Developer role aligns perfectly with my skill set, especially my focus on React.js.
 
-I came across the [Position] opening at [Company] and was immediately drawn to [specific aspect of the role/company].
+My recent projects use a tech stack that matches your requirements perfectly. I’ve focused on building responsive, high-performance interfaces and clean frontend architecture.
 
-With my background in [Your Key Skills], I believe I could contribute meaningfully to [specific project/goal mentioned in JD]. At [Previous Company], I [specific achievement that relates to the role].
+You can check my relevant work and portfolio here:
+Portfolio: https://vishal88.com/
+Resume: https://drive.google.com/file/d/1vrdazR4u6ffQhxmlUFX9NNQLkXADcWkX/view
 
-I'd love to learn more about how [Company] is approaching [specific challenge] and explore how my experience could add value to your team.
-
-Would you be open to a brief conversation this week?
+I look forward to discussing how I can contribute to [Company Name]’s success.
 
 Best regards,
-[Your Name]`
+Vishal Rathod
+Contact: 6353008705
+LinkedIn: https://www.linkedin.com/in/rathod-vishal/
+GitHub: https://github.com/vishalrathod8788/`
       },
       {
-        name: "Story-Driven Email",
-        template: `Subject: [Your Unique Value] for [Company]'s [Team/Project]
+        name: "Backend Focused",
+        template: `Subject: Application for Backend Developer | MERN Stack | Vishal Rathod
+Hi [Recruiter Name],
 
-Hello [Name],
+I hope you’re doing well.
 
-When I saw the [Position] role at [Company], it felt like the perfect match.
+I’m Vishal Rathod, a Full Stack Developer specializing in the MERN stack. I was excited to reach out because your job posting for the Backend Developer role aligns perfectly with my skill set, especially my focus on Node.js, Express, and MongoDB.
 
-I've spent the last [X years] working on [relevant experience], most recently at [Company] where I [specific achievement with numbers]. What excites me about [Company] is [specific aspect from JD or company mission].
+My recent projects use a tech stack that matches your requirements perfectly. I’ve focused on building scalable server-side logic, efficient APIs, and managing database architectures.
 
-I'm particularly drawn to [specific challenge/project mentioned in JD] because [personal connection or relevant experience].
+You can check my relevant work and portfolio here:
+Portfolio: https://vishal88.com/
+Resume: https://drive.google.com/file/d/1vrdazR4u6ffQhxmlUFX9NNQLkXADcWkX/view
 
-I'd appreciate the opportunity to discuss how my experience with [specific skill] could support [Company's goal].
+I look forward to discussing how I can contribute to [Company Name]’s success.
 
-Would you have 15 minutes this week for a quick chat?
+Best regards,
+Vishal Rathod
+Contact: 6353008705
+LinkedIn: https://www.linkedin.com/in/rathod-vishal/
+GitHub: https://github.com/vishalrathod8788/`
+      },
+      {
+        name: "Full Stack Focused",
+        template: `Subject: Application for Full Stack Developer | MERN Stack | Vishal Rathod
+Hi [Recruiter Name],
 
-Warm regards,
-[Your Name]
-[LinkedIn Profile]`
+I hope you’re doing well.
+
+I’m Vishal Rathod, a Full Stack Developer specializing in the MERN stack. I was excited to reach out because your job posting for the Full Stack role aligns perfectly with my skill set. I have hands-on experience in building end-to-end applications using React.js, Node.js, Express, and MongoDB.
+
+My recent projects, including an AI-powered email automation tool, use a tech stack that matches your requirements perfectly. I focus on creating seamless user interfaces while ensuring robust and scalable backend architecture.
+
+You can check my relevant work and portfolio here:
+
+Portfolio: https://vishal88.com/
+Resume: https://drive.google.com/file/d/1vrdazR4u6ffQhxmlUFX9NNQLkXADcWkX/view
+
+I look forward to discussing how my ability to handle both frontend and backend development can contribute to [Company Name]’s success.
+
+Best regards,
+Vishal Rathod
+Contact: 6353008705
+LinkedIn: https://www.linkedin.com/in/rathod-vishal/
+GitHub: https://github.com/vishalrathod8788/`
       }
     ]
   };
@@ -101,14 +132,19 @@ Warm regards,
           }`}
       >
         {/* Header */}
-        <div className="bg-liner-to-r from-indigo-600 to-purple-600 text-white p-6 flex justify-between items-center">
-          <h2 className="text-2xl font-bold">How It Works? 🚀</h2>
+        <div className="bg-linear-to-r from-indigo-600 via-purple-600 to-pink-600 text-white p-6 flex justify-between items-center shadow-lg">
+          <h2 className="text-2xl font-bold tracking-tight">How It Works? 🚀</h2>
           <button
             onClick={onClose}
-            className="text-white hover:text-indigo-900 hover:bg-white hover:bg-opacity-20 rounded-full p-2 transition-colors duration-150"
+            className="text-white hover:bg-white/20 hover:scale-110 active:scale-95 rounded-full p-2"
             aria-label="Close modal"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6 transition-transform duration-300 group-hover:rotate-90"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -140,38 +176,53 @@ Warm regards,
         <div className="flex-1 overflow-y-auto p-6">
           {activeTab === "guide" ? (
             <div className="space-y-6">
-              {/* Step 1 */}
-              <div className="flex gap-4">
-                <div className="flex-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
+              {/* Step 1 - Refined Version */}
+              <div className="flex items-start gap-4 group">
+                {/* Circle Icon: added shrink-0 to prevent squeezing */}
+                <div className="shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold text-lg shadow-sm">
                   1
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Enter Your Profile</h3>
-                  <p className="text-slate-600">
-                    Add your skills, experience, and background in the "Your Profile" section. Be specific about your expertise.
+
+                {/* Text Content */}
+                <div className="flex-1">
+                  <h3 className="font-semibold text-lg text-slate-900 mb-1 leading-tight">
+                    Enter Your Profile
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Add your skills, experience, and background in the
+                    <span className="font-medium text-indigo-600"> "Your Profile" </span>
+                    section. Be specific about your expertise.
                   </p>
-                  <div className="mt-2 p-3 bg-slate-50 rounded-lg text-sm">
-                    <strong>Example:</strong> "Full-stack developer with 3 years experience in React, Node.js, and MongoDB. Built scalable applications serving 100K+ users."
+
+                  {/* Example Box: Added border for better definition */}
+                  <div className="mt-3 p-3 bg-slate-50 border border-slate-100 rounded-xl text-sm italic">
+                    <span className="font-bold text-slate-700 not-italic">Example: </span>
+                    "Full-stack developer with 3 years experience in React, Node.js, and MongoDB. Built scalable applications serving 100K+ users."
                   </div>
                 </div>
               </div>
 
               {/* Step 2 */}
-              <div className="flex gap-4">
-                <div className="shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
+              {/* Step 2 - Choose Your Template */}
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold text-lg shadow-sm">
                   2
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Choose a Template</h3>
-                  <p className="text-slate-600">
-                    Select a template from the "Templates" tab above, or create your own. Use placeholders like [Name], [Company], [Position].
+                <div className="flex-1">
+                  <h3 className="font-semibold text-lg text-slate-900 mb-1 leading-tight">
+                    Select Your Template
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Choose the pre-filled template that matches the role whether it's React, Backend, or Full Stack.
                   </p>
-                  <button
-                    onClick={() => setActiveTab("templates")}
-                    className="mt-2 text-indigo-600 hover:text-indigo-700 font-medium text-sm"
-                  >
-                    → View Templates
-                  </button>
+                  <div className="mt-3">
+                    <button
+                      onClick={() => setActiveTab("templates")}
+                      className="inline-flex items-center px-4 py-2 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 rounded-lg font-medium text-sm border border-indigo-100 transition-colors"
+                    >
+                      <span className="mr-2">📝</span> View My Templates
+                    </button>
+                  </div>
                 </div>
               </div>
 
