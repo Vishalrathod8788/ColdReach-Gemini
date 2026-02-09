@@ -101,7 +101,7 @@ Warm regards,
           }`}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 flex justify-between items-center">
+        <div className="bg-liner-to-r from-indigo-600 to-purple-600 text-white p-6 flex justify-between items-center">
           <h2 className="text-2xl font-bold">How It Works? 🚀</h2>
           <button
             onClick={onClose}
@@ -142,7 +142,7 @@ Warm regards,
             <div className="space-y-6">
               {/* Step 1 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
+                <div className="flex-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
                   1
                 </div>
                 <div>
@@ -158,7 +158,7 @@ Warm regards,
 
               {/* Step 2 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
+                <div className="shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
                   2
                 </div>
                 <div>
@@ -177,7 +177,7 @@ Warm regards,
 
               {/* Step 3 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
+                <div className="shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
                   3
                 </div>
                 <div>
@@ -190,7 +190,7 @@ Warm regards,
 
               {/* Step 4 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
+                <div className="shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
                   4
                 </div>
                 <div>
@@ -203,7 +203,7 @@ Warm regards,
 
               {/* Step 5 */}
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
+                <div className="shrink-0 w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">
                   5
                 </div>
                 <div>
