@@ -5,6 +5,7 @@ import { OutputDisplay } from "../components/OutputDisplay";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { useAuth } from "../context/AuthContext";
+import API from "../api/axios";
 
 export const Home = () => {
   const [userProfile, setUserProfile] = useState({ bio: "", template: "" });
@@ -40,21 +41,18 @@ export const Home = () => {
 
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5544/api/generator/generate", {
-        method: "POST",
+      const response = await API.post("/generator/generate", {
+        bio: userProfile.bio,
+        template: userProfile.template,
+        jd: jd,
+        type: outputType
+      }, {
         headers: {
-          "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({
-          bio: userProfile.bio,
-          template: userProfile.template,
-          jd: jd,
-          type: outputType
-        }),
       });
 
-      const data = await response.json();
+      const data = response.data;
 
       console.log(data);
 
