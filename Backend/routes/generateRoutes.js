@@ -1,12 +1,9 @@
 import { Router } from "express";
 import { userData } from "../controller/generateController.js";
+import { protect } from "../middleware/auth.js";
 
-const routes = Router();
+const generateRoutes = Router();
 
-routes.get("/", (req, res) => {
-  res.status(200).send("Welcome to the Server...");
-});
+generateRoutes.post("/generate", protect, userData);
 
-routes.post("/generate", userData);
-
-export default routes;
+export default generateRoutes;
