@@ -5,7 +5,7 @@ import { OutputDisplay } from "../components/OutputDisplay";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { useAuth } from "../context/AuthContext";
-import API from "../api/axios";
+import API from "../../api/axios";
 
 export const Home = () => {
   const [userProfile, setUserProfile] = useState({ bio: "", template: "" });
