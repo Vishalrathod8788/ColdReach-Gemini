@@ -48,20 +48,18 @@ Vishal Rathod`
     email: [
       {
         name: "React.js Focused",
-        template: `Subject: Application for Frontend Developer | MERN Stack | Vishal Rathod
-Hi [Recruiter Name],
+        template: `Hi [Recruiter Name],
 
-I’m Vishal Rathod, a Full Stack Developer specializing in the MERN stack. I was excited to reach out because your job posting for the Frontend Developer role aligns perfectly with my skill set, especially my focus on React.js.
+I’m Vishal Rathod, a developer with strong hands-on experience in frontend technologies, especially React.js, JavaScript, HTML, and CSS.
 
-My recent projects use a tech stack that matches your requirements perfectly. I’ve focused on building responsive, high-performance interfaces and clean frontend architecture.
+I came across your job posting for the Frontend Developer role and found it well aligned with my skill set. The technologies and projects mentioned closely match the work I have done.
 
-You can check my relevant work and portfolio here:
-Portfolio: https://vishal88.com/
+You can review my relevant work and portfolio here: https://vishal88.com/  
 Resume: https://drive.google.com/file/d/1vrdazR4u6ffQhxmlUFX9NNQLkXADcWkX/view
 
-I look forward to discussing how I can contribute to [Company Name]’s success.
+I’d be happy to discuss how I can contribute to your team.
 
-Best regards,
+Best regards,  
 Vishal Rathod
 Contact: 6353008705
 LinkedIn: https://www.linkedin.com/in/rathod-vishal/
@@ -69,46 +67,37 @@ GitHub: https://github.com/vishalrathod8788/`
       },
       {
         name: "Backend Focused",
-        template: `Subject: Application for Backend Developer | MERN Stack | Vishal Rathod
-Hi [Recruiter Name],
+        template: `Hi [Recruiter Name],
 
-I hope you’re doing well.
+I’m Vishal Rathod, a backend developer with hands-on experience in Node.js, Express.js, MongoDB, and RESTful API development.
 
-I’m Vishal Rathod, a Full Stack Developer specializing in the MERN stack. I was excited to reach out because your job posting for the Backend Developer role aligns perfectly with my skill set, especially my focus on Node.js, Express, and MongoDB.
+I came across your job posting for the Backend Developer role and found it well aligned with my technical background. The responsibilities and tech stack mentioned match the projects I have worked on.
 
-My recent projects use a tech stack that matches your requirements perfectly. I’ve focused on building scalable server-side logic, efficient APIs, and managing database architectures.
-
-You can check my relevant work and portfolio here:
-Portfolio: https://vishal88.com/
+You can review my work and portfolio here: https://vishal88.com/  
 Resume: https://drive.google.com/file/d/1vrdazR4u6ffQhxmlUFX9NNQLkXADcWkX/view
 
-I look forward to discussing how I can contribute to [Company Name]’s success.
+I’d be glad to discuss how I can add value to your development team.
 
-Best regards,
+Best regards,  
 Vishal Rathod
 Contact: 6353008705
 LinkedIn: https://www.linkedin.com/in/rathod-vishal/
 GitHub: https://github.com/vishalrathod8788/`
       },
       {
-        name: "Full Stack Focused",
-        template: `Subject: Application for Full Stack Developer | MERN Stack | Vishal Rathod
-Hi [Recruiter Name],
+        name: "MERN Stack Focused",
+        template: `Hi [Recruiter Name],
 
-I hope you’re doing well.
+I’m Vishal Rathod, a backend developer with hands-on experience in Node.js, Express.js, MongoDB, and RESTful API development.
 
-I’m Vishal Rathod, a Full Stack Developer specializing in the MERN stack. I was excited to reach out because your job posting for the Full Stack role aligns perfectly with my skill set. I have hands-on experience in building end-to-end applications using React.js, Node.js, Express, and MongoDB.
+I came across your job posting for the Backend Developer role and found it well aligned with my technical background. The responsibilities and tech stack mentioned match the projects I have worked on.
 
-My recent projects, including an AI-powered email automation tool, use a tech stack that matches your requirements perfectly. I focus on creating seamless user interfaces while ensuring robust and scalable backend architecture.
-
-You can check my relevant work and portfolio here:
-
-Portfolio: https://vishal88.com/
+You can review my work and portfolio here: https://vishal88.com/  
 Resume: https://drive.google.com/file/d/1vrdazR4u6ffQhxmlUFX9NNQLkXADcWkX/view
 
-I look forward to discussing how my ability to handle both frontend and backend development can contribute to [Company Name]’s success.
+I’d be glad to discuss how I can add value to your development team.
 
-Best regards,
+Best regards,  
 Vishal Rathod
 Contact: 6353008705
 LinkedIn: https://www.linkedin.com/in/rathod-vishal/
@@ -119,7 +108,7 @@ GitHub: https://github.com/vishalrathod8788/`
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
-    alert("Template copied to clipboard! ✅");
+    alert("Template copied to clipboard!");
   };
 
   return (

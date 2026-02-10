@@ -17,52 +17,75 @@ export const generateColdMessage = async (
 
       if (type === "email") {
         prompt = `
-You are an expert cold email writer. Generate a highly personalized professional cold email based on the following information:
+You are an expert professional email writer.
 
-USER BIO: ${bio}
+GOAL:
+Generate a SHORT, clear, and professional job application email.
 
-EMAIL TEMPLATE STYLE: ${template}
+USER PROFILE:
+${bio}
 
-JOB DESCRIPTION: ${jd}
+USER-SELECTED EMAIL TEMPLATE (STRICT — FOLLOW STRUCTURE & TONE):
+${template}
 
-Instructions:
-- Create a professional cold email with a compelling subject line
-- Start with "Subject: " followed by the subject line
-- Then add a blank line
-- Write the email body that matches the template style
-- Highlight relevant skills from user bio that match the job requirements
-- Keep it professional, concise, and engaging
-- Make it specific to the company and role mentioned in JD
-- Length should be 150-200 words
-- Include a clear call-to-action
+JOB DESCRIPTION:
+${jd}
+
+STRICT INSTRUCTIONS (NON-NEGOTIABLE):
+- Follow the TEMPLATE style and structure
+- Generate a relevant subject line
+- Start with "Subject: " followed by the subject
+- Add one blank line after the subject
+- Keep the email professional and direct
+- Mention alignment between job role and user skills
+- Mention relevant tech stack or projects only if applicable
+- DO NOT use generic phrases like "excited to apply" or "dream opportunity"
+- DO NOT add unnecessary storytelling
+- Length must be between 80–120 words
+- Include a soft call-to-action (e.g. "I’d be happy to discuss further")
 - Use proper email formatting
 
-Format:
-Subject: [Your compelling subject line]
+OUTPUT FORMAT:
+Subject: [Relevant subject line]
 
 [Email body]
 
-Generate only the email with subject line, no additional text or explanations.
+Generate ONLY the email with subject line.
+No explanations, no extra text.
 `;
-      } else {
+      } else if (type === "message") {
         prompt = `
-You are an expert cold message writer. Generate a highly personalized cold message based on the following information:
+You are an expert LinkedIn cold message writer.
 
-USER BIO: ${bio}
+GOAL:
+Generate a SHORT, professional cold message for LinkedIn or direct messaging.
 
-TEMPLATE STYLE: ${template}
+USER PROFILE:
+Bio: ${bio}
 
-JOB DESCRIPTION: ${jd}
+USER-SELECTED TEMPLATE (STRICT — DO NOT CHANGE STRUCTURE):
+${template}
 
-Instructions:
-- Create a personalized cold message that matches the template style
-- Highlight relevant skills from user bio that match the job requirements
-- Keep it professional yet engaging
-- Make it specific to the company and role mentioned in JD
-- Length should be 100-150 words
-- Include a clear call-to-action
+JOB DESCRIPTION:
+${jd}
 
-Generate only the cold message, no additional text or explanations.
+STRICT RULES (NON-NEGOTIABLE):
+- Follow the TEMPLATE structure exactly
+- Replace placeholders using USER PROFILE and JD
+- DO NOT add new sentences or paragraphs
+- DO NOT add excitement, storytelling, or buzzwords
+- Message must be concise and recruiter-friendly
+- Maximum length: 40–60 words total
+- No subject line
+- No email-style formatting
+- CTA must be soft (e.g. “Sharing my profile for your review”)
+
+OUTPUT REQUIREMENTS:
+- Plain text only
+- Same line breaks as TEMPLATE
+- No explanations, no headings, no extra text
+
+Generate ONLY the final cold message.
 `;
       }
 
